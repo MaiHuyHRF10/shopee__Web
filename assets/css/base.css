@@ -45,13 +45,13 @@ html {
 .grid__column-2 {
     padding-left: 12px;
     padding-right: 12px;
-    width: calc(100% / 5);
+    width: calc(100% / 6);
 }
 
 .grid__column-10 {
     padding-left: 12px;
     padding-right: 12px;
-    width: 83.3334btn%;
+    width: 83.3334%;
 }
 
 
@@ -137,4 +137,63 @@ html {
 .btn.btn--primary {
     background-color: var(--primary-color);
     color: white;
+}
+
+/* Selection */
+.select-input {
+    position: relative;
+    height: 34px;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    min-width: 200px;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.select-input:hover .select-input__list {
+    display: block;
+}
+
+.select-input__label {
+    font-size: 1.4rem;
+}
+
+.select-input__icon {
+    position: relative;
+    font-size: 2rem;
+    color: #4A4A4A;
+    top: 1px;
+}
+
+.select-input__list {
+    position: absolute;
+    list-style: none;
+    border-radius: 2px;
+    left: 0;
+    right: 0;
+    top: calc(100% + 2px);
+    background-color: var(--white-color);
+    margin: 0;
+    padding: 9px 12px;
+    display: none;
+}
+
+.select-input__item {
+    
+}
+
+.select-input__link {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: var(--black-color);
+    font-weight: 500;
+    padding: 10px 0;
+    display: block;
+}
+
+.select-input__link:hover {
+    color: var(--primary-color);
 }
