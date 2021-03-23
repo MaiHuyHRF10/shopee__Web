@@ -1,6 +1,6 @@
 :root {
     --primary-color: #ee4b2b;
-    --primary-color-rgba: rgb(238, 75, 43);
+    --primary-color-rgba: rgb(238, 75, 43, 0.8);
     --white-color: #fff;
     --black-color: black;
     --text-color: #333;
@@ -157,7 +157,6 @@ html {
     min-width: 200px;
     justify-content: space-between;
     cursor: pointer;
-    z-index: 1;
 }
 
 .select-input:hover .select-input__list {
@@ -186,6 +185,7 @@ html {
     margin: 0;
     padding: 9px 12px;
     display: none;
+    z-index: 1;
 }
 
 .select-input__item {
@@ -203,4 +203,45 @@ html {
 
 .select-input__link:hover {
     color: var(--primary-color);
+}
+
+/* Pagintaion */
+
+
+.pagination {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.pagination-item {
+    margin: 0 15px;
+}
+
+.pagination-item--active .pagination-item__link {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.pagination-item--active .pagination-item__link:hover {
+    background-color: var(--primary-color-rgba);
+}
+
+.pagination-item__link {
+    --height: 30px;
+    text-decoration: none;
+    font-size: 2rem;
+    color: #939393;
+    min-width: 40px;
+    height: var(--height);
+    text-align: center;
+    line-height: var(--height);
+    display: block;
+    border-radius: 2px;
+}
+
+.pagination-item__icon {
+
 }
