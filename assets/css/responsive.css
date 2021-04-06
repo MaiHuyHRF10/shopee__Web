@@ -28,6 +28,10 @@
         display: none;
     }
 
+    .header__nav-bar-btn {
+        display: block;
+    }
+
     .header__sort-bar {
         display: flex;
     }
@@ -64,6 +68,11 @@
     .header__cart {
         width: 80px;
         text-align: right;
+    }
+
+    .header__nav-bar-btn {
+        padding-right: 0;
+        padding-left: 28px;
     }
 
 }
@@ -116,6 +125,11 @@
 
     .header__mobile-search {
         display: block;
+    }
+
+    .header__nav-mobile-avt {
+        width: 40px;
+        height: 40px;
     }
 
     .app__content {

@@ -506,6 +506,7 @@
 }
 
 .header__mobile-search-icon {
+    margin-top: 5px;
     font-size: 2.4rem;
     color: var(--white-color);
 }
@@ -734,6 +735,115 @@
     right: -4px;
 }
 
+.header__nav-bar-btn {
+    margin-top: 4px;
+    color: var(--white-color);
+    font-size: 2.6rem;
+    cursor: pointer;
+    display: none;
+    padding: 0 12px;
+}
+
+.nav-mobile-checkbox:checked ~ .header__nav-overlay {
+    display: block;
+}
+
+.nav-mobile-checkbox:checked ~ .header__nav-mobile {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.header__nav-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+    display: none;
+    animation: fadeIn linear 0.2s;
+}
+
+.header__nav-mobile {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 320px;
+    max-width: 100%;
+    background-color: var(--white-color);
+    z-index: 2;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all linear 0.2s;
+}
+
+.header__nav-mobile-heading {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
+
+.header__nav-mobile-info {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.header__nav-mobile-avt {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 16px;
+}
+
+.header__nav-mobile-name {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #555;
+}
+
+.header__nav-mobile-close {
+    padding: 14px 14px;
+    font-size: 2.4rem;
+    color: #555;
+}
+
+.header__nav-mobile-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 16px 0;
+}
+
+.header__nav-mobile-item {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.header__nav-mobile-item:hover {
+    background-color: #ebebeb;
+}
+
+.header__nav-mobile-icon {
+    color: #909090;
+    font-size: 2rem;
+}
+
+.header__nav-mobile-link {
+    display: block;
+    padding: 20px 16px;
+    width: 100%;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    color: #333;
+}
+
+
 .header__search-input-wrap {
     flex: 1;
     height: 100%;
@@ -914,6 +1024,7 @@
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
     display: none;
+    z-index: -1;
 }
 
 
